@@ -1,13 +1,15 @@
 <label>Server Name:</label>
-<!-- <input
+<!-- Data binding <input
   type="text"
   class='form-control'
   (input)="onUpdateServerName($event)"> -->
+
+<!--Use ng-model for two way data binding  -->
 <input
   type="text"
   class='form-control'
-[(ngModel)]="serverName">
-<p>{{ serverName }}</p>
+  [(ngModel)]="serverName">
+<!-- <p>{{ serverName }}</p> -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
 <!-- replace string interpolation with property binding, don't mix them by putting curlies within the property binding -->
 <!-- <p [innerText]="allowNewServer"></p> -->
