@@ -4,7 +4,12 @@ import { Component } from '@angular/core';
 @Component({
   //selector should be a unique string
   selector: 'app-server',
-  templateUrl: './server.component.html'
+  templateUrl: './server.component.html',
+  styles: [`
+      .online {
+        color: white;
+      }
+  `]
 })
 export class ServerComponent {
   serverId: number = 10;
@@ -18,7 +23,7 @@ export class ServerComponent {
   getColor() {
     return this.serverStatus === 'online' ? 'green' : 'red'
   }
-  
+
   getServerStatus(){
     return this.serverStatus
   }
